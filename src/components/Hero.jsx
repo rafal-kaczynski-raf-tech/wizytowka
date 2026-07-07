@@ -1,7 +1,10 @@
+import logo from '../assets/Logo.png'
+
 function Hero() {
   return (
     <section id="top" className="hero">
       <div className="container hero-inner">
+        <img src={logo} alt="RafTech Solutions" className="hero-logo" />
         <p className="eyebrow">Strony wizytówki dla firm &middot; Aplikacje</p>
         <h1>
           Cześć, tu Rafał <br />z <span>RafTech Solutions</span>

@@ -150,6 +150,15 @@
   );
 }
 
+.hero-logo {
+  height: 96px;
+  width: auto;
+  margin: 0 auto 24px;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
 .hero h1 span {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
