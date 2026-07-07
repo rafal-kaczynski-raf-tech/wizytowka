@@ -1,30 +1,26 @@
 import logo from '../assets/Logo.png'
+import { useLanguage } from '../context/LanguageContext'
 
 function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section id="top" className="hero">
       <div className="container hero-inner">
         <img src={logo} alt="RafTech Solutions" className="hero-logo" />
-        <p className="eyebrow">Strony wizytówki dla firm &middot; Aplikacje</p>
+        <p className="eyebrow">{t.hero.eyebrow}</p>
         <h1>
-          Cześć, tu Rafał <br />z <span>RafTech Solutions</span>
+          {t.hero.heading1} <br />
+          {t.hero.heading2} <span>RafTech Solutions</span>
         </h1>
-        <p className="hero-lead">
-          Tworzę nowoczesne strony wizytówki dla firm oraz aplikacje webowe
-          i mobilne &ndash; szybko, estetycznie i z dbałością o szczegóły.
-        </p>
-        <p className="hero-lead hero-lead-muted">
-          Szukasz sprawdzonego inżyniera oprogramowania, który nie tylko
-          &bdquo;pisze kod&rdquo;, ale rozumie zaawansowaną architekturę,
-          optymalizuje procesy i buduje skalowalne systemy od A do Z? Jesteś
-          we właściwym miejscu.
-        </p>
+        <p className="hero-lead">{t.hero.lead1}</p>
+        <p className="hero-lead hero-lead-muted">{t.hero.lead2}</p>
         <div className="hero-actions">
           <a href="#kontakt" className="btn btn-primary">
-            Porozmawiajmy o projekcie
+            {t.hero.ctaPrimary}
           </a>
           <a href="#portfolio" className="btn btn-ghost">
-            Zobacz realizacje
+            {t.hero.ctaGhost}
           </a>
         </div>
       </div>

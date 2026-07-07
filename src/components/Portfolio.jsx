@@ -3,29 +3,24 @@ import projekt2 from '../assets/Projekt2.png'
 import projekt3 from '../assets/Projekt3.png'
 import projekt4 from '../assets/Projekt4.png'
 import projekt5 from '../assets/Projekt5.png'
+import { useLanguage } from '../context/LanguageContext'
 
-const demoProjects = [
-  { src: projekt1, alt: 'FitZone – strona wizytówka dla siłowni z systemem rezerwacji treningów' },
-  { src: projekt2, alt: 'Travelix – strona biura podróży z wyszukiwarką ofert i blogiem' },
-  { src: projekt3, alt: 'PixelPeak – strona agencji kreatywnej z portfolio i prezentacją usług' },
-  { src: projekt4, alt: 'HomeNest – portal nieruchomości z filtrowaniem ofert i panelem dodawania ogłoszeń' },
-  { src: projekt5, alt: 'TaskFlow – aplikacja / SaaS do zarządzania projektami z prezentacją funkcji i cennika' },
-]
+const projectImages = [projekt1, projekt2, projekt3, projekt4, projekt5]
 
 function Portfolio() {
+  const { t } = useLanguage()
+  const demoProjects = projectImages.map((src, index) => ({
+    src,
+    alt: t.portfolio.projectAlts[index],
+  }))
+
   return (
     <section id="portfolio" className="section">
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Wybrane realizacje z portfolio</p>
-          <h2>Przykładowe strony wizytówki i aplikacje</h2>
-          <p className="portfolio-disclaimer">
-            Wszystkie prezentowane projekty stanowią autorskie koncepcje
-            demonstracyjne przygotowane przez RafTech Solutions w celu
-            zaprezentowania stylu projektowania, możliwości technologicznych
-            oraz podejścia do tworzenia nowoczesnych stron internetowych i
-            systemów.
-          </p>
+          <p className="eyebrow">{t.portfolio.eyebrow}</p>
+          <h2>{t.portfolio.heading}</h2>
+          <p className="portfolio-disclaimer">{t.portfolio.disclaimer}</p>
         </div>
         <div className="project-grid">
           {demoProjects.map((project) => (
@@ -36,25 +31,17 @@ function Portfolio() {
         </div>
 
         <div className="section-heading portfolio-advanced-heading">
-          <p className="eyebrow">Zaawansowany projekt technologiczny</p>
-          <h2>Travel Assistant &ndash; Multi-agentowy system AI</h2>
+          <p className="eyebrow">{t.portfolio.advancedEyebrow}</p>
+          <h2>{t.portfolio.advancedHeading}</h2>
         </div>
         <div className="portfolio-item">
-          <p>
-            Zaprojektowałem i rozwijałem zaawansowanego asystenta podróży
-            opartego o LLM. System obejmuje backend w NestJS orkiestrujący
-            agentów (LangGraph.js), klasyfikację złożoności zapytań oraz
-            integrację z platformami rezerwacyjnymi. Wdrożyłem pełen system
-            obserwowalności (Langfuse), pętlę feedbacku oraz interaktywne
-            interfejsy czatu w React Native i Angularze.
-          </p>
+          <p>{t.portfolio.advancedText}</p>
           <div className="tags">
-            <span className="tag">NestJS</span>
-            <span className="tag">LangGraph.js</span>
-            <span className="tag">LLM Orchestration</span>
-            <span className="tag">Langfuse</span>
-            <span className="tag">React Native</span>
-            <span className="tag">Angular</span>
+            {t.portfolio.advancedTags.map((tag) => (
+              <span className="tag" key={tag}>
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>

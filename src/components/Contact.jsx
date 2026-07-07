@@ -1,22 +1,21 @@
+import { useLanguage } from '../context/LanguageContext'
+
 function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section id="kontakt" className="section contact">
       <div className="container contact-inner">
         <div className="section-heading">
-          <p className="eyebrow">Zapraszam do kontaktu</p>
-          <h2>Porozmawiajmy o tym, jak mogę przyspieszyć Twój projekt</h2>
+          <p className="eyebrow">{t.contact.eyebrow}</p>
+          <h2>{t.contact.heading}</h2>
         </div>
-        <p className="contact-lead">
-          Wsparcie w modelu B2B (subcontracting) lub dedykowany projekt
-          &ndash; napisz, a odpowiem najszybciej jak to możliwe.
-        </p>
+        <p className="contact-lead">{t.contact.lead}</p>
         <div className="contact-details">
           <a href="mailto:kontakt@raftech-solutions.pl" className="btn btn-primary">
             kontakt@raftech-solutions.pl
           </a>
-          <span className="contact-note">
-            (podmień na docelowy adres e-mail / telefon / profil Oferteo)
-          </span>
+          <span className="contact-note">{t.contact.emailNote}</span>
         </div>
       </div>
     </section>

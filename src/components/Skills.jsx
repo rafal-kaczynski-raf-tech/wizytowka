@@ -1,56 +1,16 @@
-const skillGroups = [
-  {
-    title: 'Backend & Architektura',
-    description:
-      'Moim głównym środowiskiem backendowym jest ekosystem TypeScript/JavaScript, ze szczególnym naciskiem na NestJS i Express. Projektuję wydajne API (REST, GraphQL, WebSocket, SSE), pracuję z systemami kolejkowymi (RabbitMQ) oraz bazami danych (PostgreSQL, Redis). Wspieram się również Pythonem, zwłaszcza w zadaniach związanych z algorytmiką i AI.',
-    tags: [
-      'Node.js',
-      'NestJS',
-      'Express',
-      'TypeScript',
-      'REST / GraphQL',
-      'WebSocket / SSE',
-      'RabbitMQ',
-      'PostgreSQL',
-      'Redis',
-      'Python',
-    ],
-  },
-  {
-    title: 'Sztuczna Inteligencja i Systemy Multi-Agentowe',
-    description:
-      'Integruję zaawansowane modele LLM (OpenAI, Azure OpenAI) z aplikacjami biznesowymi. Wykorzystuję LangGraph.js i LangChain.js do budowy orkiestracji agentów, wdrażam mechanizmy RAG, Human-in-the-loop oraz dbam o bezpieczeństwo zapytań (Guardrails, Presidio PII).',
-    tags: [
-      'OpenAI / Azure OpenAI',
-      'LangGraph.js',
-      'LangChain.js',
-      'RAG',
-      'Human-in-the-loop',
-      'Guardrails',
-      'Presidio PII',
-      'Langfuse',
-    ],
-  },
-  {
-    title: 'Aplikacje mobilne i Frontend',
-    description:
-      'Tworzę płynne aplikacje cross-platformowe wykorzystując React Native oraz buduję nowoczesne interfejsy webowe w Angularze. Radzę sobie z zaawansowanym zarządzaniem stanem (RxJS) i integracją skomplikowanych widżetów.',
-    tags: ['React Native', 'React', 'Angular', 'RxJS'],
-  },
-]
+import { useLanguage } from '../context/LanguageContext'
 
 function Skills() {
+  const { t } = useLanguage()
+  const skillGroups = t.skills.groups
+
   return (
     <section id="specjalizacje" className="section section-alt">
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Dodatkowo w ofercie</p>
-          <h2>Zaawansowane kompetencje techniczne</h2>
-          <p className="services-lead">
-            Poza stronami wizytówkami i aplikacjami wspieram również bardziej
-            złożone, techniczne projekty &ndash; dla zespołów, które potrzebują
-            czegoś więcej.
-          </p>
+          <p className="eyebrow">{t.skills.eyebrow}</p>
+          <h2>{t.skills.heading}</h2>
+          <p className="services-lead">{t.skills.lead}</p>
         </div>
         <div className="cards">
           {skillGroups.map((group) => (

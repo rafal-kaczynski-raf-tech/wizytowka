@@ -1,28 +1,15 @@
-const reasons = [
-  {
-    title: 'Inżynierskie podejście',
-    description:
-      'Projektuję czystą, skalowalną architekturę i skupiam się na długofalowej wydajności kodu.',
-  },
-  {
-    title: 'Przejrzystość i terminowość',
-    description:
-      'Zapewniam pełną przejrzystość współpracy, dotrzymuję ustalonych terminów oraz wystawiam faktury VAT.',
-  },
-  {
-    title: 'Szybkie wdrożenie',
-    description:
-      'Szybko wdrażam się w istniejące środowiska i od razu dostarczam wartość Twojemu zespołowi lub projektowi.',
-  },
-]
+import { useLanguage } from '../context/LanguageContext'
 
 function WhyMe() {
+  const { t } = useLanguage()
+  const reasons = t.whyMe.reasons
+
   return (
     <section id="dlaczego-ja" className="section section-alt">
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Dlaczego warto podjąć współpracę</p>
-          <h2>Co mnie wyróżnia</h2>
+          <p className="eyebrow">{t.whyMe.eyebrow}</p>
+          <h2>{t.whyMe.heading}</h2>
         </div>
         <div className="cards cards-compact">
           {reasons.map((reason) => (
