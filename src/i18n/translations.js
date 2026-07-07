@@ -154,7 +154,24 @@ export const translations = {
       heading: 'Porozmawiajmy o tym, jak mogę przyspieszyć Twój projekt',
       lead:
         'Wsparcie w modelu B2B (subcontracting) lub dedykowany projekt \u2013 napisz, a odpowiem najszybciej jak to możliwe.',
-      emailNote: '(podmień na docelowy adres e-mail / telefon / profil Oferteo)',
+      form: {
+        mailSubjectPrefix: 'Zapytanie ze strony RafTech Solutions',
+        nameLabel: 'Imię i nazwisko',
+        namePlaceholder: 'Jan Kowalski',
+        emailLabel: 'Adres e-mail',
+        emailPlaceholder: 'jan.kowalski@firma.pl',
+        subjectLabel: 'Czego dotyczy zapytanie?',
+        subjectOptions: [
+          { value: 'website', label: 'Strona wizytówka dla firmy' },
+          { value: 'app', label: 'Aplikacja webowa lub mobilna' },
+          { value: 'pricing', label: 'Wycena projektu' },
+          { value: 'other', label: 'Inne zapytanie' },
+        ],
+        messageLabel: 'Wiadomość',
+        messagePlaceholder: 'Opisz krótko, czego potrzebujesz\u2026',
+        submit: 'Wyślij zapytanie',
+      },
+      directEmailLabel: 'Możesz też napisać bezpośrednio:',
     },
     footer: {
       tagline: 'Node.js \u00b7 NestJS \u00b7 AI / LangGraph \u00b7 React Native \u00b7 Angular',
@@ -315,7 +332,24 @@ export const translations = {
       heading: 'Let\u2019s talk about how I can speed up your project',
       lead:
         'Support in a B2B (subcontracting) model or a dedicated project \u2013 write to me and I\u2019ll respond as soon as possible.',
-      emailNote: '(replace with your target email address / phone number / Oferteo profile)',
+      form: {
+        mailSubjectPrefix: 'Inquiry from RafTech Solutions website',
+        nameLabel: 'Full name',
+        namePlaceholder: 'John Smith',
+        emailLabel: 'Email address',
+        emailPlaceholder: 'john.smith@company.com',
+        subjectLabel: 'What is your inquiry about?',
+        subjectOptions: [
+          { value: 'website', label: 'Business website' },
+          { value: 'app', label: 'Web or mobile application' },
+          { value: 'pricing', label: 'Project quote' },
+          { value: 'other', label: 'Other inquiry' },
+        ],
+        messageLabel: 'Message',
+        messagePlaceholder: 'Briefly describe what you need\u2026',
+        submit: 'Send inquiry',
+      },
+      directEmailLabel: 'You can also write directly:',
     },
     footer: {
       tagline: 'Node.js \u00b7 NestJS \u00b7 AI / LangGraph \u00b7 React Native \u00b7 Angular',
