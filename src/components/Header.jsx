@@ -1,11 +1,17 @@
+import logo from '../assets/Logo.png'
+
 function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
         <a href="#top" className="logo">
-          Raf<span>Tech</span> Solutions
+          <img src={logo} alt="RafTech Solutions" className="logo-img" />
+          <span className="logo-text">
+            Raf<span>Tech</span> Solutions
+          </span>
         </a>
         <nav className="nav">
+          <a href="#oferta">Oferta</a>
           <a href="#o-mnie">O mnie</a>
           <a href="#specjalizacje">Specjalizacje</a>
           <a href="#portfolio">Portfolio</a>

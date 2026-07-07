@@ -44,8 +44,13 @@ function Skills() {
     <section id="specjalizacje" className="section section-alt">
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">W czym się specjalizuję</p>
-          <h2>Kompleksowe wsparcie techniczne</h2>
+          <p className="eyebrow">Dodatkowo w ofercie</p>
+          <h2>Zaawansowane kompetencje techniczne</h2>
+          <p className="services-lead">
+            Poza stronami wizytówkami i aplikacjami wspieram również bardziej
+            złożone, techniczne projekty &ndash; dla zespołów, które potrzebują
+            czegoś więcej.
+          </p>
         </div>
         <div className="cards">
           {skillGroups.map((group) => (

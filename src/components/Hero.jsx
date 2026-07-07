@@ -2,11 +2,15 @@ function Hero() {
   return (
     <section id="top" className="hero">
       <div className="container hero-inner">
-        <p className="eyebrow">Software Engineer &middot; B2B</p>
+        <p className="eyebrow">Strony wizytówki dla firm &middot; Aplikacje</p>
         <h1>
           Cześć, tu Rafał <br />z <span>RafTech Solutions</span>
         </h1>
         <p className="hero-lead">
+          Tworzę nowoczesne strony wizytówki dla firm oraz aplikacje webowe
+          i mobilne &ndash; szybko, estetycznie i z dbałością o szczegóły.
+        </p>
+        <p className="hero-lead hero-lead-muted">
           Szukasz sprawdzonego inżyniera oprogramowania, który nie tylko
           &bdquo;pisze kod&rdquo;, ale rozumie zaawansowaną architekturę,
           optymalizuje procesy i buduje skalowalne systemy od A do Z? Jesteś

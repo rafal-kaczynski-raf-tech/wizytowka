@@ -13,6 +13,23 @@
   text-align: center;
 }
 
+.services-lead {
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.portfolio-disclaimer {
+  color: var(--muted);
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+.portfolio-advanced-heading {
+  margin-top: 64px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -64,14 +81,28 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   font-size: 18px;
   text-decoration: none;
   color: var(--text-h);
 }
 
+.logo-img {
+  height: 32px;
+  width: auto;
+}
+
 .logo span {
   color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .logo-text {
+    display: none;
+  }
 }
 
 .nav {
@@ -128,9 +159,15 @@
 
 .hero-lead {
   max-width: 640px;
-  margin: 24px auto 32px;
+  margin: 24px auto 0;
   color: var(--muted);
   font-size: 18px;
+}
+
+.hero-lead-muted {
+  font-size: 15px;
+  margin: 12px auto 32px;
+  opacity: 0.8;
 }
 
 .hero-actions {
@@ -206,6 +243,37 @@
 .card p {
   color: var(--muted);
   font-size: 15px;
+}
+
+.card-highlight {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, rgba(79, 157, 255, 0.08), var(--surface));
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tags {
